@@ -1,0 +1,359 @@
+<!DOCTYPE html> 
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+<html lang="fr">
+<style>
+
+body
+{	
+  padding: 4px 20px ;
+  background: #c00 ;
+background-color:#B82010; /*rouge cardinal */   
+  color: #fff ;
+  border: 1px solid #600 ;
+  font: 1em "Trebuchet MS",Arial,sans-serif ;
+  line-height: 1em ;
+  text-align: left ;
+  color:blue;
+  text-decoration: none ;
+}
+
+.err {
+    color: red;
+    font-weight: bold;
+}
+.bouton-apparence  {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 10px;
+  font-family: system-ui, sans-serif;
+  line-height: 1; /* réduit la hauteur de ligne */
+  vertical-align: middle; /* aligne mieux avec les autres éléments */
+  background-color: blue;
+   background-color: #74D0F1;
+     background-color: #A9EAFE;
+    background-color: #CCCCFF; 
+    background-color: #80D0D0;
+    background-color: #9FE855;
+    background-color: #00FFFF;
+    background-color: #F88E55;
+    background-color: #FEBFT2;
+background-color: #F1E2BE;
+/* background-color: #5f9ea0;*/
+/*background-color: #ffe4c4; bisque*/
+/*background-color: #F1E2BE;*/
+  border: 1px solid #CCC;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
+}
+.bouton-apparence {
+  margin-top: 0.5px;
+  margin-bottom: 1px;
+}
+.sommaire-item {
+    width: 60px;              /* largeur compacte */
+    font-size: 10px;          /* plus petit que les blocs */
+    padding: 4px;             /* compact */
+    margin: 3px;              /* espacement léger */
+    display: inline-block;    /* pour aligner plusieurs items sur une ligne */
+    word-break: break-word;   /* pour éviter les débordements */
+}
+.sommaire-item {
+    width: 90px;              /* plus large */
+    font-size: 12px;          /* plus lisible */
+    padding: 6px;             /* un peu plus d’air */
+    margin: 4px;              /* espacement léger */
+    display: inline-block;    /* pour aligner plusieurs items sur une ligne */
+    word-break: break-word;   /* pour éviter les débordements */
+}
+
+button {background-color: #F88E55; font-size: 10px;}
+button {background-color: #C8F527; font-size: 10px;}
+/*button {background-color: #0834A3; font-size: 10px; color: white;}*/
+button {background-color: #08A32C; font-size: 10px;}
+button {background-color: #08A32C; font-size: 10px;color: white;}
+button {background-color: #F2FFFF; font-size: 14px;color:#0000FF;}
+.sfr {background-color: #F54927; font-size: 10px;color: white;}
+.bash_script-doc {background-color: #FFC1C1; font-size:10px; color:#0000FF;}
+.Conducteur-IA {background-color: #00FFFF; font-size:10px; color:#000000;}
+.Libelle {background-color: #F2FFFF; font-size:14px; color:#0000FF;}
+.Photos {background-color: #87CEEB; font-size:10px; color:#000000;}
+/*.Concert {background-color:#F1E2BE; font-size:10px; color:#ECF0F1;}*/
+/*10:#A52A2A:#ECF0F1:Brown3:*/
+.Concert {background-color: #A52A2A; font-size:10px;color:#ECF0F1;}
+.Chant {background-color:#A52A2A; font-size: 10px; color:#ECF0F1;}
+.digipad {background-color: #D8BFD8; font-size: 10px; color: #000000;}
+.copilot {background-color: #DAA520; font-size: 10px; color: #000000;}
+/*02:#9ACD32:#000000:YellowGreen:*/
+.administratif {background-color: #9ACD32; font-size: 10px;color:#000000 ;}
+.referentieldonnees {background-color: #A52A2A; font-size: 10px;color:#ECF0F1;}
+.referentiel {background-color: #A52A2A; font-size: 10px;color:#ECF0F1;}
+.musecore {background-color: #FFE4C4; font-size: 10px;color:#0000FF;}
+.bashdoc {background-color: #FA8072; font-size: 10px;color:#000000;}
+
+/*01:#FFC1C1:#0000FF:RosyBrown1:*/
+/*03:#FFE4C4;:#0000FF:Bisque:*/
+/*04:#F2FFFF:#0000FF:azure2:*/
+/*05:#87CEEB:#000000:DeepSkyBlue2:*/
+/*06:#9400d3:#ECF0F1:DarkViolet:*/
+/*07:#D8BFD8:#000000:thistle:*/
+/*08:#DAA520:#000000:goldenrod1:*/
+/*09:#5F9EA0:#000000:teal:*/
+/*11:#808080:#ECF0F1:Gray74:*/
+/*12:#BDB76B:#000000:DarkKhaki:*/
+/*13:#8FBC8F:#000000:DarkSeaGreen:*/
+/*14:#F5DEB3:#000000:Wheat3:*/
+/*15:#FFF8DC:#000000:cornsilk3:*/
+/*16:#6495ED:#000000:DodgerBlue2:*/
+/*17:#00FFFF:#000000:Cyan2:*/
+/*18:#DEB887:#000000:burlywood2:*/
+/*19:#A52A2A:#ECF0F1:brown1:*/
+/*20:#FF68B4:#000000:HotPink:*/
+/*21:#8FBC8F:#000000:DarkSeaGreen2:*/
+/*22:#FA8072:#000000:salmon3:*/
+/*23:#FFA500:#000000:Orange:*/
+/*24:#FFC1C1:#0000FF:RosyBrown1:*/
+/*25:#9ACD32:#000000:YellowGreen:*/
+/*26:#FFE4C4:#0000FF:Bisque:*/
+/*27:#D8BFD8:#000000:thistle:*/
+/*28:#DAA520:#000000:goldenrod1:*/
+/*29:#A52A2A:#ECF0F1:Brown3:*/
+/*30:#808080:#ECF0F1:Gray74:*/
+/*31:#BDB76B:#000000:DarkKhaki:*/
+/*32:#8FBC8F:#000000:DarkSeaGreen:*/
+/*33:#F5DEB3:#000000:Wheat3:*/
+/*34:#FFF8DC:#000000:cornsilk3:*/
+/*35:#6495ED:#000000:Cornflower:*/
+/*36:#00FFFF:#000000:Cyan2:*/
+/*37:#DEB887:#000000:burlywood2:*/
+/*38:#A52A2A:#ECF0F1:brown1:*/
+/*39:#FF68B4:#000000:HotPink:*/
+/*40:#8FBC8F:#000000:DarkSeaGreen2:*/
+/*41:#FA8072:#000000:salmon3:
+/*42:#FFA500:#000000:Orange:*/
+/*43:#FFC1C1:#0000FF:RosyBrown1:*/
+/*44:#9ACD32:#000000:YellowGree*/
+/*| Thème | Emoji proposé | Justification courte |
+|-------|---------------|----------------------|
+| Alimentaires | 🍎 | Nourriture en général |
+| Conducteurs-IA | 🤖🚗 | IA + conduite |
+| FacturesEtPaiements | 💳 | Paiements, facturation |
+| LaHague_Cherbourg | 🌊 | Région maritime |
+| Modeles-Regroupes | 🧩 | Assemblage, regroupement |
+| QuestionsIA | ❓🤖 | Questions sur l’IA |
+| Sauvegarde-Messagerie-Thunderbird | 📨 | Messagerie |
+| acces_global | 🌐 | Accès global |
+| achats | 🛒 | Achats |
+| activites-suivi | 📊 | Suivi d’activités |
+| administratif | 🗂️ | Dossiers |
+| agenda | 📅 | Agenda |
+| archives | 🗄️ | Archivage |
+| bash | 🖥️ | Terminal |
+| bash-doc | 📘 | Documentation |
+| bash-sites | 🌐🖥️ | Sites web + terminal |
+| bash_script-doc | 📜 | Scripts documentés |
+| bricolage | 🔧 | Bricolage |
+| bureaux | 🏢 | Bureaux |
+| chants_divers | 🎤 | Chant |
+| concerts | 🎶 | Concerts |
+| cumul_doc | 📚 | Ensemble de documents |
+| cumul_doc-tests | 🧪📚 | Docs + tests |
+| desktop | 🖥️ | Bureau informatique |
+| divers | 🌀 | Divers |
+| documents | 📄 | Documents |
+| essais | 🧪 | Essais |
+| euriware | 🏢💼 | Entreprise / IT |
+| famille | 👨‍👩‍👧 | Famille |
+| fonctions-bash | ⚙️ | Fonctions techniques |
+| hors_theme-a_analyser | 🧐 | À analyser |
+| icones | 🎨 | Icônes |
+| infos_diverses | 📝 | Notes diverses |
+| java-doc | ☕📘 | Java + doc |
+| linux_windows | 🐧🪟 | Linux + Windows |
+| maintenance | 🛠️ | Maintenance |
+| musique | 🎵 | Musique |
+| notices | 📖 | Notices |
+| pdf | 📕 | PDF |
+| photos | 📷 | Photos |
+| photos_referentiel | 🗂️📷 | Référentiel photo |
+| preselections | ⭐ | Pré-sélections |
+| saint_nazaire | ⚓ | Ville portuaire |
+| sante_soins | 🏥 | Santé |
+| scanner | 📠 | Scanner |
+| simulation_sauvegarde | 💾🧪 | Sauvegarde + test |
+| spirituel | ✨ | Spiritualité |
+| thumbnails | 🖼️ | Miniatures |
+| toutou | 🐶 | Chien |
+| windows | 🪟 | Windows |
+| windows_applis_telechargees | ⬇️🪟 | Apps téléchargées |
+| windows_batch | 📜🪟 | Scripts batch |
+*/
+/*body {
+  background-color: #fff4e4;
+}
+*/
+.hover-title {
+  display: inline;
+  pointer-events: auto;
+  cursor: pointer;
+  font-family: helvetica;
+  font-size: 24px;
+}
+
+.hover-image {
+  display: none;
+}
+
+body:not(.mobile) .hover-title:hover + .hover-image {
+  display: flex;
+  pointer-events: none;
+}
+
+.hover-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Change width and height to scale images */
+  width: 95vw;
+  height: 95vh;
+}
+
+.hover-image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0;
+}
+ .hover-title {
+    display: inline-block;
+    margin: 4px;
+    cursor: pointer;
+    color: #0055aa;
+    text-decoration: underline;
+  }
+
+  .hover-mini {
+    width: 7px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    margin: 4px;
+    background-color: #4da3ff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+  }
+  .hover-mini:hover {
+    background-color: #1c7be0;
+  }
+
+  #hover-preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px;
+  }
+
+  #hover-preview img {
+    max-width: 400px;
+    max-height: 300px;
+  }
+  #hover-preview img {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+.video-mini {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.video-mini::after {
+  content: "▶";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-mini {
+  width: 18px;
+  height: 18px;
+  background: #333;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+}
+.video-mini::after {
+  content: "▶";
+  color: white;
+  font-size: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*.Concert {background-color:#F1E2BE; font-size:10px; color:#ECF0F1;}*/
+/*.Concert {background-color: #A52A2A; font-size:10px;color:#ECF0F1;}*/
+/*10:#A52A2A:#ECF0F1:Brown3:*/
+/*.Chant {background-color:#A52A2A; font-size: 10px; color:#ECF0F1;}*/
+
+</style>  
+
+
+
+<body TEXT="black" LINK="#034963" VLINK="#034963" ALINK="red" """">
+
+<ul>
+<!-- INSERT-LIST-HERE -->
+<li class="bouton-apparence" style="word-break: break-word; width: 300px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/comment_ne_pas_te_louer-n1-concert-retina-nde-20260315-reduit-v2_01g1e565qlt1.mp4" target="_blank"><button><b><i>Concert Rétina 2026 Notre-Dame d'Espérance</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/comment_ne_pas_te_louer-vignette_kr00g5h1jj.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1627468/comment_ne_pas_te_louer-n1-concert-retina-nde-20260315-reduit-v2_01g1e565qlt1.mp4" class="video-mini" target="_blank"></a><button><b><i>1 . Comment ne pas te louer?</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 300px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/le_seigneur_est_ma_lumiere-n1-concert-retina-nde-20260315-reduit_bgmocwmrhvs.mp4" target="_blank"><button><b><i>Concert Rétina 2026 Notre-Dame d'Espérance</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/le_seigneur_est_ma_lumiere-vignette_h4z7sdcz93u.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1627468/le_seigneur_est_ma_lumiere-n1-concert-retina-nde-20260315-reduit_bgmocwmrhvs.mp4" class="video-mini" target="_blank"></a><button><b><i>2 . Le Seigneur est ma lumière</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 300px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/ouvrez_vous_porte_de_justice-n1-concert-retina-nde-20260315-reduit-v3_xrbhjclxxw.mp4" target="_blank"><button><b><i>Concert Rétina 2026 Notre-Dame d'Espérance</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/ouvrez_vous_porte_de_justice-vignette_41kh5ap32uy.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1627468/ouvrez_vous_porte_de_justice-n1-concert-retina-nde-20260315-reduit-v3_xrbhjclxxw.mp4" class="video-mini" target="_blank"></a><button><b><i>3 . Ouvrez-vous porte de justice</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 300px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/allez_a_jesus_eucharistie-n1-concert-retina-nde-20260315-reduit_26dviaf41cl.mp4" target="_blank"><button><b><i>Concert Rétina 2026 Notre-Dame d'Espérance</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/allez_a_jesus_eucharistie_s1468d9z5t.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1627468/allez_a_jesus_eucharistie-n1-concert-retina-nde-20260315-reduit_26dviaf41cl.mp4" class="video-mini" target="_blank"></a><button><b><i>4 . Allez à Jésus Eucharistie</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 300px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/psaume_150-n1-concert-retina-nde-20260315-reduit_d9byoecqzb.mp4" target="_blank"><button><b><i>Concert Rétina 2026 Notre-Dame d'Espérance</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/psaume_150-vignette_ra9on02psm.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1627468/psaume_150-n1-concert-retina-nde-20260315-reduit_d9byoecqzb.mp4" class="video-mini" target="_blank"></a><button><b><i>5 . Psaume 150</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 300px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/se_revoir-00-concert-retina-nde-20260315-reduit-v5_i1x1w4ev89a.mp4" target="_blank"><button><b><i>Concert Rétina 2026 Notre-Dame d'Espérance</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1627468/se_revoir-vignette_dy1k19kodwq.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1627468/se_revoir-00-concert-retina-nde-20260315-reduit-v5_i1x1w4ev89a.mp4" class="video-mini" target="_blank"></a><button><b><i>6 . Se Revoir</i></b></button></li>
+</ul>
+<div id="hover-preview"></div>
+<script>
+document.addEventListener("mouseover", e => {
+  const target = e.target;
+
+  if (!target.dataset.hover) return;
+
+  const img = target.dataset.hover;
+  const preview = document.getElementById("hover-preview");
+
+  preview.innerHTML = `<img src="./img/${img}">`;
+  preview.style.display = "block";
+});
+
+document.addEventListener("mouseout", e => {
+  const target = e.target;
+  if (target.dataset && target.dataset.hover) {
+    document.getElementById("hover-preview").style.display = "none";
+  }
+});
+</script>
+</ul>
+</body>
+</html>
