@@ -1,0 +1,383 @@
+
+<!DOCTYPE html> 
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+<html lang="fr">
+<style>
+
+body
+{	
+  padding: 4px 20px ;
+  background: #c00 ;
+background-color:#B82010; /*rouge cardinal */  
+background-color:#821aea; 
+  color: #fff ;
+  border: 1px solid #600 ;
+  font: 1em "Trebuchet MS",Arial,sans-serif ;
+  line-height: 1em ;
+  text-align: left ;
+  color:blue;
+  text-decoration: none ;
+}
+
+.err {
+    color: red;
+    font-weight: bold;
+}
+.bouton-apparence  {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 10px;
+  font-family: system-ui, sans-serif;
+  line-height: 1; /* réduit la hauteur de ligne */
+  vertical-align: middle; /* aligne mieux avec les autres éléments */
+  background-color: blue;
+   background-color: #74D0F1;
+     background-color: #A9EAFE;
+    background-color: #CCCCFF; 
+    background-color: #80D0D0;
+    background-color: #9FE855;
+    background-color: #00FFFF;
+    background-color: #F88E55;
+    background-color: #FEBFT2;
+background-color: #F1E2BE;
+/* background-color: #5f9ea0;*/
+/*background-color: #ffe4c4; bisque*/
+/*background-color: #F1E2BE;*/
+  border: 1px solid #CCC;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
+}
+.bouton-apparence {
+  margin-top: 0.5px;
+  margin-bottom: 1px;
+}
+.sommaire-item {
+    width: 60px;              /* largeur compacte */
+    font-size: 10px;          /* plus petit que les blocs */
+    padding: 4px;             /* compact */
+    margin: 3px;              /* espacement léger */
+    display: inline-block;    /* pour aligner plusieurs items sur une ligne */
+    word-break: break-word;   /* pour éviter les débordements */
+}
+.sommaire-item {
+    width: 90px;              /* plus large */
+    font-size: 12px;          /* plus lisible */
+    padding: 6px;             /* un peu plus d’air */
+    margin: 4px;              /* espacement léger */
+    display: inline-block;    /* pour aligner plusieurs items sur une ligne */
+    word-break: break-word;   /* pour éviter les débordements */
+}
+
+button {background-color: #F88E55; font-size: 10px;}
+button {background-color: #C8F527; font-size: 10px;}
+/*button {background-color: #0834A3; font-size: 10px; color: white;}*/
+button {background-color: #08A32C; font-size: 10px;}
+button {background-color: #08A32C; font-size: 10px;color: white;}
+button {background-color: #F2FFFF; font-size: 14px;color:#0000FF;}
+.sfr {background-color: #F54927; font-size: 10px;color: white;}
+.bash_script-doc {background-color: #FFC1C1; font-size:10px; color:#0000FF;}
+.Conducteur-IA {background-color: #00FFFF; font-size:10px; color:#000000;}
+.Libelle {background-color: #F2FFFF; font-size:14px; color:#0000FF;}
+.Photos {background-color: #87CEEB; font-size:10px; color:#000000;}
+/*.Concert {background-color:#F1E2BE; font-size:10px; color:#ECF0F1;}*/
+/*10:#A52A2A:#ECF0F1:Brown3:*/
+.Concert {background-color: #A52A2A; font-size:10px;color:#ECF0F1;}
+.Chant {background-color:#A52A2A; font-size: 10px; color:#ECF0F1;}
+.digipad {background-color: #D8BFD8; font-size: 10px; color: #000000;}
+.copilot {background-color: #DAA520; font-size: 10px; color: #000000;}
+/*02:#9ACD32:#000000:YellowGreen:*/
+.administratif {background-color: #9ACD32; font-size: 10px;color:#000000 ;}
+.referentieldonnees {background-color: #A52A2A; font-size: 10px;color:#ECF0F1;}
+.referentiel {background-color: #A52A2A; font-size: 10px;color:#ECF0F1;}
+.musecore {background-color: #FFE4C4; font-size: 10px;color:#0000FF;}
+.bashdoc {background-color: #FA8072; font-size: 10px;color:#000000;}
+
+/*01:#FFC1C1:#0000FF:RosyBrown1:*/
+/*03:#FFE4C4;:#0000FF:Bisque:*/
+/*04:#F2FFFF:#0000FF:azure2:*/
+/*05:#87CEEB:#000000:DeepSkyBlue2:*/
+/*06:#9400d3:#ECF0F1:DarkViolet:*/
+/*07:#D8BFD8:#000000:thistle:*/
+/*08:#DAA520:#000000:goldenrod1:*/
+/*09:#5F9EA0:#000000:teal:*/
+/*11:#808080:#ECF0F1:Gray74:*/
+/*12:#BDB76B:#000000:DarkKhaki:*/
+/*13:#8FBC8F:#000000:DarkSeaGreen:*/
+/*14:#F5DEB3:#000000:Wheat3:*/
+/*15:#FFF8DC:#000000:cornsilk3:*/
+/*16:#6495ED:#000000:DodgerBlue2:*/
+/*17:#00FFFF:#000000:Cyan2:*/
+/*18:#DEB887:#000000:burlywood2:*/
+/*19:#A52A2A:#ECF0F1:brown1:*/
+/*20:#FF68B4:#000000:HotPink:*/
+/*21:#8FBC8F:#000000:DarkSeaGreen2:*/
+/*22:#FA8072:#000000:salmon3:*/
+/*23:#FFA500:#000000:Orange:*/
+/*24:#FFC1C1:#0000FF:RosyBrown1:*/
+/*25:#9ACD32:#000000:YellowGreen:*/
+/*26:#FFE4C4:#0000FF:Bisque:*/
+/*27:#D8BFD8:#000000:thistle:*/
+/*28:#DAA520:#000000:goldenrod1:*/
+/*29:#A52A2A:#ECF0F1:Brown3:*/
+/*30:#808080:#ECF0F1:Gray74:*/
+/*31:#BDB76B:#000000:DarkKhaki:*/
+/*32:#8FBC8F:#000000:DarkSeaGreen:*/
+/*33:#F5DEB3:#000000:Wheat3:*/
+/*34:#FFF8DC:#000000:cornsilk3:*/
+/*35:#6495ED:#000000:Cornflower:*/
+/*36:#00FFFF:#000000:Cyan2:*/
+/*37:#DEB887:#000000:burlywood2:*/
+/*38:#A52A2A:#ECF0F1:brown1:*/
+/*39:#FF68B4:#000000:HotPink:*/
+/*40:#8FBC8F:#000000:DarkSeaGreen2:*/
+/*41:#FA8072:#000000:salmon3:
+/*42:#FFA500:#000000:Orange:*/
+/*43:#FFC1C1:#0000FF:RosyBrown1:*/
+/*44:#9ACD32:#000000:YellowGree*/
+/*| Thème | Emoji proposé | Justification courte |
+|-------|---------------|----------------------|
+| Alimentaires | 🍎 | Nourriture en général |
+| Conducteurs-IA | 🤖🚗 | IA + conduite |
+| FacturesEtPaiements | 💳 | Paiements, facturation |
+| LaHague_Cherbourg | 🌊 | Région maritime |
+| Modeles-Regroupes | 🧩 | Assemblage, regroupement |
+| QuestionsIA | ❓🤖 | Questions sur l’IA |
+| Sauvegarde-Messagerie-Thunderbird | 📨 | Messagerie |
+| acces_global | 🌐 | Accès global |
+| achats | 🛒 | Achats |
+| activites-suivi | 📊 | Suivi d’activités |
+| administratif | 🗂️ | Dossiers |
+| agenda | 📅 | Agenda |
+| archives | 🗄️ | Archivage |
+| bash | 🖥️ | Terminal |
+| bash-doc | 📘 | Documentation |
+| bash-sites | 🌐🖥️ | Sites web + terminal |
+| bash_script-doc | 📜 | Scripts documentés |
+| bricolage | 🔧 | Bricolage |
+| bureaux | 🏢 | Bureaux |
+| chants_divers | 🎤 | Chant |
+| concerts | 🎶 | Concerts |
+| cumul_doc | 📚 | Ensemble de documents |
+| cumul_doc-tests | 🧪📚 | Docs + tests |
+| desktop | 🖥️ | Bureau informatique |
+| divers | 🌀 | Divers |
+| documents | 📄 | Documents |
+| essais | 🧪 | Essais |
+| euriware | 🏢💼 | Entreprise / IT |
+| famille | 👨‍👩‍👧 | Famille |
+| fonctions-bash | ⚙️ | Fonctions techniques |
+| hors_theme-a_analyser | 🧐 | À analyser |
+| icones | 🎨 | Icônes |
+| infos_diverses | 📝 | Notes diverses |
+| java-doc | ☕📘 | Java + doc |
+| linux_windows | 🐧🪟 | Linux + Windows |
+| maintenance | 🛠️ | Maintenance |
+| musique | 🎵 | Musique |
+| notices | 📖 | Notices |
+| pdf | 📕 | PDF |
+| photos | 📷 | Photos |
+| photos_referentiel | 🗂️📷 | Référentiel photo |
+| preselections | ⭐ | Pré-sélections |
+| saint_nazaire | ⚓ | Ville portuaire |
+| sante_soins | 🏥 | Santé |
+| scanner | 📠 | Scanner |
+| simulation_sauvegarde | 💾🧪 | Sauvegarde + test |
+| spirituel | ✨ | Spiritualité |
+| thumbnails | 🖼️ | Miniatures |
+| toutou | 🐶 | Chien |
+| windows | 🪟 | Windows |
+| windows_applis_telechargees | ⬇️🪟 | Apps téléchargées |
+| windows_batch | 📜🪟 | Scripts batch |
+*/
+/*body {
+  background-color: #fff4e4;
+}
+*/
+.hover-title {
+  display: inline;
+  pointer-events: auto;
+  cursor: pointer;
+  font-family: helvetica;
+  font-size: 24px;
+}
+
+.hover-image {
+  display: none;
+}
+
+body:not(.mobile) .hover-title:hover + .hover-image {
+  display: flex;
+  pointer-events: none;
+}
+
+.hover-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Change width and height to scale images */
+  width: 95vw;
+  height: 95vh;
+}
+
+.hover-image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  margin-bottom: 0;
+}
+ .hover-title {
+    display: inline-block;
+    margin: 4px;
+    cursor: pointer;
+    color: #0055aa;
+    text-decoration: underline;
+  }
+
+  .hover-mini {
+    width: 7px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    margin: 4px;
+    background-color: #4da3ff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+  }
+  .hover-mini:hover {
+    background-color: #1c7be0;
+  }
+
+  #hover-preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px;
+  }
+
+  #hover-preview img {
+    max-width: 400px;
+    max-height: 300px;
+  }
+  #hover-preview img {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+.video-mini {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.video-mini::after {
+  content: "▶";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-mini {
+  width: 18px;
+  height: 18px;
+  background: #333;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+}
+.video-mini::after {
+  content: "▶";
+  color: white;
+  font-size: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*.Concert {background-color:#F1E2BE; font-size:10px; color:#ECF0F1;}*/
+/*.Concert {background-color: #A52A2A; font-size:10px;color:#ECF0F1;}*/
+/*10:#A52A2A:#ECF0F1:Brown3:*/
+/*.Chant {background-color:#A52A2A; font-size: 10px; color:#ECF0F1;}*/
+
+</style>  
+
+
+
+<body TEXT="black" LINK="#034963" VLINK="#034963" ALINK="red" """">
+
+<ul>
+<!-- INSERT-LIST-HERE -->
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/01-plus_jamais_ca-n1-concert-nfaf-adlc-220512-video-reduite_hlkprl3s0aj.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/01-plus_jamais_ca-vignette_omrl16qwmx.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/01-plus_jamais_ca-n1-concert-nfaf-adlc-220512-video-reduite_hlkprl3s0aj.mp4" class="video-mini" target="_blank"></a><button><b><i>01-Plus jamais çà&nbsp;</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/02-c_est_la_mode_et_voila_tout-texte-nfaf-introduction_du_concert-video-reduite_1sam52fspx6i.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/02-c_est_la_mode_et_voila_tout-vignette_wwxi7m9ovhn.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/02-c_est_la_mode_et_voila_tout-texte-nfaf-introduction_du_concert-video-reduite_1sam52fspx6i.mp4" class="video-mini" target="_blank"></a><button><b><i>02- C'est la mode et voilà tout</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/03-couper_les_cheveux-n1-concert-nfaf-adlc-220512-video-reduite_11ep8oldja0p.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/03-couper_les_cheveux-vignette_xtcyhznmcwb.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/03-couper_les_cheveux-n1-concert-nfaf-adlc-220512-video-reduite_11ep8oldja0p.mp4" class="video-mini" target="_blank"></a><button><b><i>03- Couper les cheveux</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/04-pour_l_amour-texte-nfaf-introduction_du_concert-reduite_ku2x8xti1is.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/04-pour_l_amour-vignette_0ny83p5sjwr.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/04-pour_l_amour-texte-nfaf-introduction_du_concert-reduite_ku2x8xti1is.mp4" class="video-mini" target="_blank"></a><button><b><i>04- Pour l'amour</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/05-monte_la_dessus-n1-concert-nfaf-adlc-solo_claude-220512-video-reduite_kmbsiuylyif.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/05-monte_la_dessus-vignette_69npkspcorj.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/05-monte_la_dessus-n1-concert-nfaf-adlc-solo_claude-220512-video-reduite_kmbsiuylyif.mp4" class="video-mini" target="_blank"></a><button><b><i>05- Monte là-dessus solo Claude, Laurent&nbsp;</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/06-nuit_de_chine-n1-concert-nfaf-adlc-220512-video-reduite_k4ug8ejkox.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/06-nuit_de_chine-vignette_nt62pt7t8f.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/06-nuit_de_chine-n1-concert-nfaf-adlc-220512-video-reduite_k4ug8ejkox.mp4" class="video-mini" target="_blank"></a><button><b><i>06- Nuit de Chine</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/07-il_etait_syndique-n1-concert-nfaf-adlc-solo_claude-220512-video-reduite_rz3k7j47ezg.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/07-il_etait_syndique-vignette_c60c1gb3bo.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/07-il_etait_syndique-n1-concert-nfaf-adlc-solo_claude-220512-video-reduite_rz3k7j47ezg.mp4" class="video-mini" target="_blank"></a><button><b><i>07- Il était syndiqué (solo Claude)</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/08-autour_des_usines-n1-concert-nfaf-220512-video-reduite_z6472y0839e.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/08-autour_des_usines-vignette_gf507lecll9.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/08-autour_des_usines-n1-concert-nfaf-220512-video-reduite_z6472y0839e.mp4" class="video-mini" target="_blank"></a><button><b><i>08- Autour des usines</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/09-les_roses_blanches-n1-concert-nfaf-220512-video-reduite_0z3gzw2qvwxh.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/09-les_roses_blanches-vignette_rkkqa3kgseh.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/09-les_roses_blanches-n1-concert-nfaf-220512-video-reduite_0z3gzw2qvwxh.mp4" class="video-mini" target="_blank"></a><button><b><i>09- Les roses blanches</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/10-la_plus_bath_des_javas-n1-concert-nfaf-220512-video-reduite_8q0vcfrbwof.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/10-la_plus_bath_des_javas-vignette_r1nx0pw9bu.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/10-la_plus_bath_des_javas-n1-concert-nfaf-220512-video-reduite_8q0vcfrbwof.mp4" class="video-mini" target="_blank"></a><button><b><i>10- La plus bath des javas</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/11-pavane_de_faure-n1-concert-nfaf-220512-video-reduite_mo3keuh3itf.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/11-pavane_de_faure-vignette_l5phgfxyqd.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/11-pavane_de_faure-n1-concert-nfaf-220512-video-reduite_mo3keuh3itf.mp4" class="video-mini" target="_blank"></a><button><b><i>11- Pavane de Faure</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/12-jazz_band_partout-n1-concert-nfaf-220512-video-reduite_o5q2n2tea8i.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/12-jazz_band_partout-vignette_ox9dkhoc0kh.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/12-jazz_band_partout-n1-concert-nfaf-220512-video-reduite_o5q2n2tea8i.mp4" class="video-mini" target="_blank"></a><button><b><i>12- Jazz band partout</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/13-boeuf_les_irreductibles-n1-concert-nfaf-220512-video-reduite_t3z9ue3whv8.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/13-boeuf_les_irreductibles-vignette_5xe16nhi49b.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/13-boeuf_les_irreductibles-n1-concert-nfaf-220512-video-reduite_t3z9ue3whv8.mp4" class="video-mini" target="_blank"></a><button><b><i>13- Boeuf les irréductibles</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/14-un_bon_garaon-n1-concert-nfaf-220512-video-reduite_wg3av5p42fj.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/14-un_bon_garcon-vignette_tkj5oij2e8p.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/14-un_bon_garaon-n1-concert-nfaf-220512-video-reduite_wg3av5p42fj.mp4" class="video-mini" target="_blank"></a><button><b><i>14- Un bon garçon</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/15-dans_la_vie_faut_pas_s_en_faire-n1-concert-nfaf-adlc-220512-video-reduite_b2wjsrikqih.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/15-dans_la_vie_faut_pas_s_en_faire-vignette_w1lhszyo7v9.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/15-dans_la_vie_faut_pas_s_en_faire-n1-concert-nfaf-adlc-220512-video-reduite_b2wjsrikqih.mp4" class="video-mini" target="_blank"></a><button><b><i>15- Dans la vie faut pas s'en faire</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/16-ta_bouche-concert-n1-concert-nfaf-220512-video-reduite_hbc1asondcb.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/16-ta_bouche-vignette_9eh43mplla6.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/16-ta_bouche-concert-n1-concert-nfaf-220512-video-reduite_hbc1asondcb.mp4" class="video-mini" target="_blank"></a><button><b><i>16- Ta bouche</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/17-la_haut-n1-concert-nfaf-220512-video-reduite_rkh6liyrtxh.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/17-la_haut-vignette_6wctkroxblr.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/17-la_haut-n1-concert-nfaf-220512-video-reduite_rkh6liyrtxh.mp4" class="video-mini" target="_blank"></a><button><b><i>17- Là-haut</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/18-la_fille_du_bedouin-n1-concert-nfaf-adlc-220512-video-reduite_1xzhpm92fn1.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/18-la_fille_du_bedoin-vignette_gggsr3v8gjr.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/18-la_fille_du_bedouin-n1-concert-nfaf-adlc-220512-video-reduite_1xzhpm92fn1.mp4" class="video-mini" target="_blank"></a><button><b><i>18- La fille du Bédouin</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/19-les_artichauts-n1-concert-nfaf-220512-video-reduite_rla2h67qe0m.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/19-les_artichauts-vignette_av6vksjm1zq.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/19-les_artichauts-n1-concert-nfaf-220512-video-reduite_rla2h67qe0m.mp4" class="video-mini" target="_blank"></a><button><b><i>19- Les artichauts</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/20-pouetpouet-n1-concert-nfaf-220512-video-reduite_9rxc2hzdv3a.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/20-pouetpouet-vignette_h7h89ifn90k.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/20-pouetpouet-n1-concert-nfaf-220512-video-reduite_9rxc2hzdv3a.mp4" class="video-mini" target="_blank"></a><button><b><i>20- PouetPouet</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/21-ramona-n1-concert-nfaf-adlc-220512-video-reduite_m2sokqud91.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/21-ramona-vignette_v0wpdub7ilh.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/21-ramona-n1-concert-nfaf-adlc-220512-video-reduite_m2sokqud91.mp4" class="video-mini" target="_blank"></a><button><b><i>21- Ramona</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/22-valentine-n1-concert-nfaf-220512-video-reduite_gspql1fj22j.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/22-valentine-vignette_4b08y4rjk0c.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/22-valentine-n1-concert-nfaf-220512-video-reduite_gspql1fj22j.mp4" class="video-mini" target="_blank"></a><button><b><i>22- Valentine</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/23-elle_vendait_des_petits_gateaux-n1-concert-nfaf-220512-video-reduite_dpqwr5pgq5w.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/23-elle_vendait_des_petits-gateaux-vignette_60bmg4nie68.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/23-elle_vendait_des_petits_gateaux-n1-concert-nfaf-220512-video-reduite_dpqwr5pgq5w.mp4" class="video-mini" target="_blank"></a><button><b><i>23- Elle vendait des petits gâteaux&nbsp;</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/24-riquita-n1-concert-nfaf-220512-video-reduite_lo2qypipzsb.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/24-riquita-vignette_l9qrzz2k32j.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/24-riquita-n1-concert-nfaf-220512-video-reduite_lo2qypipzsb.mp4" class="video-mini" target="_blank"></a><button><b><i>24- Riquita</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/25-tout_ca_n_vaut_pas_l_amour-n1-concert-nfaf-adlc-220512-video-reduite_uskn0hvrf7.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/25-tout_ca_ne_vaut_pas_l_amour-vignette_sf6spb6ft9j.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/25-tout_ca_n_vaut_pas_l_amour-n1-concert-nfaf-adlc-220512-video-reduite_uskn0hvrf7.mp4" class="video-mini" target="_blank"></a><button><b><i>25- Tout çà ne vaut pas l'amour</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/26-pays_du_sourire-n1-concert-nfaf-220512-video-reduite_5rgax9gdt3s.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/26-pays_du_sourire-vignette_1wh09xyxn9.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/26-pays_du_sourire-n1-concert-nfaf-220512-video-reduite_5rgax9gdt3s.mp4" class="video-mini" target="_blank"></a><button><b><i>&nbsp;26- Pays du sourire</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/27-ils_n_ont_pas_ca-n1-concert-nfaf-220512-video-reduite_3cw5g6mrtdh.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/27-ils_n_ont_pas_ca-vignette_oxxb71vqqup.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/27-ils_n_ont_pas_ca-n1-concert-nfaf-220512-video-reduite_3cw5g6mrtdh.mp4" class="video-mini" target="_blank"></a><button><b><i>27- Ils n'ont pas çà</i></b></button></li>
+<li class="bouton-apparence" style="word-break: break-word; width: 350px;"><a href="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/28-final-nfaf-n1-concert-nfaf-adlc-220512-video-reduite_zbn5reo5gp.mp4" target="_blank"><button><b><i>Nos Folles Années Folles 22 Mai 2022 (soir)</i></b></button><button class="Concert">Concert<img height="160" width="263" src="https://digipad.s3.sbg.io.cloud.ovh.net/1721389/28-final-vignette_0tpkjyo5p7x9.jpg" alt="Pas d&apos;image"/></button></a><a href="https://bernard4466.github.io/video.html?src=https://digipad.s3.sbg.io.cloud.ovh.net/1721389/28-final-nfaf-n1-concert-nfaf-adlc-220512-video-reduite_zbn5reo5gp.mp4" class="video-mini" target="_blank"></a><button><b><i>28- Final</i></b></button></li>
+</ul>
+<div id="hover-preview"></div>
+<script>
+document.addEventListener("mouseover", e => {
+  const target = e.target;
+
+  if (!target.dataset.hover) return;
+
+  const img = target.dataset.hover;
+  const preview = document.getElementById("hover-preview");
+
+  preview.innerHTML = `<img src="./img/${img}">`;
+  preview.style.display = "block";
+});
+
+document.addEventListener("mouseout", e => {
+  const target = e.target;
+  if (target.dataset && target.dataset.hover) {
+    document.getElementById("hover-preview").style.display = "none";
+  }
+});
+</script>
+</ul>
+</body>
+</html>
